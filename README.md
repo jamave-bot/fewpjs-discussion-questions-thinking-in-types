@@ -20,11 +20,11 @@ For the following functions, fill in the table with the types of the inputs and 
 
 | Function                                         | types of inputs                  | type of output                |
 | ------------------------------------------------ | -------------------------------- | ----------------------------- |
-| `function addFive(number) { return number + 5}`  |                                  |                               |
-| `function sum(A, B) { return A + B }`            |                                  |                               |
-| `function concat(A, B) { return "" + A + B }`    |                                  |                               |
-| `document.querySelector`                         |                                  |                               |
-| `window.fetch`                                   |                                  |                               |
+| `function addFive(number) { return number + 5}`  |   num                            |  num                          |
+| `function sum(A, B) { return A + B }`            |   num                            |  num                          |
+| `function concat(A, B) { return "" + A + B }`    |   string                         |  num/string                   |
+| `document.querySelector`                         |   string                         |  string/HTML object?          |
+| `window.fetch`                                   |   string                         |  Response object              |
 
 ### "Shapes" of `Object`s
 
@@ -77,11 +77,11 @@ Fill in the table using the 'shape' shorthand
 
 | Function      | types of inputs                  | type of output           |
 | ------------- | -------------------------------- | ------------------------ |
-| `getName`     |                                  |                          |
-| `getAge`      |                                  |                          |
-| `makePerson`  |                                  |                          |
-| `birthday`    |                                  |                          |
-| `getDistance` |                                  |                          |
+| `getName`     |    object                        | str                      |
+| `getAge`      |    object                        | num                      |
+| `makePerson`  |    string,num                    | object                   |
+| `birthday`    |    object                        | object                   |
+| `getDistance` |    object                        | num                      |
 
 ### Function Signatures
 
@@ -101,11 +101,11 @@ For practice, add the function signature to the functions in the table.
 
 | Function      | types of inputs            | type of output             | function signature |
 | ------------- | -------------------------- | -------------------------- | ------------------ |
-| `getName`     |                            |                            |                    |
-| `getAge`      |                            |                            |                    |
-| `makePerson`  |                            |                            |                    |
-| `birthday`    |                            |                            |                    |
-| `getDistance` |                            |                            |                    |
+| `getName`     |                            |                            |  getName(person:Object):string    |
+| `getAge`      |                            |                            |  getAge(person:Object):number     |
+| `makePerson`  |                            |                            |  makePerson(name:string, age:number):Person      |
+| `birthday`    |                            |                            |  birthday(person:Person):Person                  |
+| `getDistance` |                            |                            |  getDistance(pointA: Point, pointB:Point):number |
 
 ### Operators as 'Functions'
 
@@ -116,7 +116,7 @@ For the following operators, fill in the types of the inputs and outputs. Follow
 | Operator   | types of inputs                  | type of output                | function signature                     |
 | ---------- | -------------------------------- | ----------------------------- | -------------------------------------- |
 | \*         | number, number                   | number                        | multiply(a: number, b: number): number |
-| + (string) |                                  |                               |                                        |
+| + (string) |                                  |                               | add(str1:string, str2:string):string   |
 | + (number) |                                  |                               |                                        |
 | -          |                                  |                               |                                        |
 | ^          |                                  |                               |                                        |
